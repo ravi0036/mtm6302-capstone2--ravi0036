@@ -34,8 +34,8 @@ header .logo h1 {
   font-size: 28px;
 }
 
-header nav {
-  margin-top: 15px;
+nav {
+  margin-top: 10px;
   font-weight: bold;
   font-size: 16px;
   letter-spacing: 1.2px;
@@ -53,7 +53,7 @@ main {
   display: flex;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin-bottom: 40px;
 }
@@ -79,25 +79,65 @@ main {
 .picture-of-day p {
   font-size: 16px;
   line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.picture-of-day form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.picture-of-day input[type="date"] {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.picture-of-day button {
+  padding: 7px 15px;
+  background-color: #0b3d91;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.picture-of-day button:hover {
+  background-color: #06427a;
 }
 
 /* Gallery section */
 .gallery {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
+  margin-bottom: 50px;
 }
 
-.gallery .card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  flex: 1;
-  padding: 15px;
+.gallery h2 {
+  color: #0b3d91;
+  margin-bottom: 20px;
+  font-size: 26px;
   text-align: center;
 }
 
-.gallery .card img {
+.gallery-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.gallery-cards .card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33% - 20px);
+  padding: 15px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.gallery-cards .card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
@@ -105,13 +145,13 @@ main {
   margin-bottom: 10px;
 }
 
-.gallery .card h3 {
+.gallery-cards .card h3 {
   color: #0b3d91;
   margin-bottom: 8px;
   font-size: 20px;
 }
 
-.gallery .card p {
+.gallery-cards .card p {
   font-size: 14px;
   line-height: 1.4;
 }
@@ -135,12 +175,13 @@ footer {
     width: 100%;
     height: 250px;
   }
-  .gallery {
+  .gallery-cards {
     flex-direction: column;
+    align-items: center;
   }
-  .gallery .card {
+  .gallery-cards .card {
+    max-width: 90%;
     margin-bottom: 20px;
+    flex: none;
   }
 }
-
-
