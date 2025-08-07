@@ -1,81 +1,47 @@
-#  NASA API - Capstone Project (Part 3)
+# Capstone Project Part 4 – NASA Astronomy Picture of the Day Viewer
 
-This is the prototype for the NASA API-themed website created using HTML and CSS. The layout was based on a mockup developed in Part 2, and this version ensures a clean, responsive user interface that displays a "Picture of the Day" and a gallery of celestial images.
+## Project Overview
 
----
+This is a responsive and interactive web application that displays NASA’s Astronomy Picture of the Day (APOD). Users can select a date to view a picture from that day and explore recent pictures in a gallery. The app uses HTML, CSS, and JavaScript, including Fetch API for async data retrieval and localStorage for caching data.
 
-## Steps Taken to Create the Prototype
+## Features
 
-1. **Project Setup**
-   - Created a new `part-3` branch from `part-2`.
-   - Organized files with clear structure:
-     - `index.html` – Main content
-     - `style/style.css` – Styling
-     - `images/` – All assets (e.g., `nasa-logo.jpg`, `galaxy.png`, etc.)
-     - `README.md` – Project report
+- Displays NASA’s Astronomy Picture of the Day dynamically.
+- Date picker form to fetch pictures from specific dates.
+- Recent pictures gallery showing the last 3 days’ images.
+- Responsive layout using Flexbox for mobile and desktop.
+- Local storage caching for offline fallback and faster loading.
+- Error handling and fallback to local images if API fails.
+- Clean and accessible UI with consistent styling.
 
-2. **Header Design**
-   - Used a centered layout with a NASA logo and heading.
-   - Included a placeholder for navigation.
-   - Applied navy blue background (`#0b3d91`) to match NASA branding.
+## Files
 
-3. **Picture of the Day Section**
-   - Used a **flex container** to align image and description side by side on larger screens.
-   - On small screens, layout switches to vertical using media queries.
-   - Applied box shadow, border-radius, and spacing for visual appeal.
+- `index.html` – Contains the webpage structure.
+- `style.css` – Contains styling for layout, responsiveness, and theming.
+- `script.js` – Handles Fetch API requests, DOM updates, form submission, and localStorage caching.
 
-4. **Gallery Section**
-   - Built using **flexbox layout** with equal spacing between cards.
-   - Each card displays an image, heading, and paragraph.
-   - On smaller screens, gallery stacks vertically with spacing preserved.
+## How to Use
 
-5. **Responsiveness**
-   - Applied media queries (`@media max-width: 768px`) to:
-     - Stack sections vertically
-     - Resize images appropriately
-     - Ensure mobile usability
+1. Clone or download this repository.
+2. Open `index.html` in a modern web browser.
+3. Use the date picker to select any date (up to today) to fetch the NASA APOD.
+4. Scroll down to explore recent pictures in the gallery.
 
-6. **Footer**
-   - Full-width footer with consistent branding
-   - Background color matches header for visual cohesion
+## Resources Used
 
----
-
-##  Resources Used
-
-- [MDN Web Docs – Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/flexbox)
-- [MDN Web Docs – Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries)
-- [CSS Box Shadow Generator](https://cssmash.com/css-box-shadow-generator/)
-- [W3C HTML Validator](https://validator.w3.org/)
-- Figma mockup (from Part 2)
-
----
+- NASA APOD API: https://api.nasa.gov/
+- MDN Web Docs for Fetch API and localStorage
+- Flexbox for responsive layout
 
 ## Challenges Faced
 
-- **Responsive Alignment of "Picture of the Day":**
-  Initially, the image and description did not align properly on smaller screens. This was resolved using `flex-direction: column` in a media query.
+- Handling API rate limits and potential fetch failures, solved by caching in localStorage.
+- Ensuring responsive layout worked smoothly across various devices using Flexbox.
+- Managing asynchronous data loading and DOM updates without page refresh.
+- Implementing graceful fallback to local images when the API is not reachable.
 
-- **Image Scaling & Cropping:**
-  Some images stretched or overflowed. This was fixed using `object-fit: cover` and setting fixed heights with `border-radius` for smooth presentation.
+## Author
 
-- **Spacing Between Cards:**
-  Ensuring equal spacing and alignment in the gallery took fine-tuning using `gap`, `flex: 1`, and consistent padding.
-
----
-
-## Validation and Testing
-
-- HTML code passed validation with no critical errors.
-- CSS tested in:
-  - Chrome
-  - Firefox
-  - Edge
-- Responsive design verified using DevTools (mobile, tablet, desktop views).
-
----
-
-
-
-## Project Structure
-
+Ravina Rani  
+Interactive Media Design  
+Algonquin College  
