@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NASA API - Astronomy Picture of the Day</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/nasalogo.png" alt="NASA Logo" />
+      <h1>NASA API</h1>
+    </div>
+    <nav>
+      <!-- Future nav links can go here -->
+    </nav>
+  </header>
+
+  <main>
+    <section class="picture-of-day">
+      <img src="images/galaxy.png" alt="Astronomy Picture of the Day" />
+      <div class="description">
+        <h2>Picture of the Day</h2>
+        <p>This is a description of the astronomy picture of the day.</p>
+        <form id="date-form">
+          <label for="date">Select Date:</label>
+          <input type="date" id="date" name="date" max="" />
+          <button type="submit">Get Picture</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2>Recent Pictures</h2>
+      <div class="gallery-cards">
+        <!-- Local fallback cards -->
+        <div class="card">
+          <img src="images/earth.png" alt="Earth" />
+          <h3>Earth</h3>
+          <p>Beautiful image of Earth from space.</p>
+        </div>
+        <div class="card">
+          <img src="images/nebula.png" alt="Nebula" />
+          <h3>Nebula</h3>
+          <p>A stunning nebula glowing with cosmic dust.</p>
+        </div>
+        <div class="card">
+          <img src="images/moon.png" alt="Moon" />
+          <h3>Moon</h3>
+          <p>The Moon’s surface showing craters and terrain.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    NASA API Capstone Project &copy; 2025
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
